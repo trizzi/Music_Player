@@ -1,0 +1,276 @@
+/*
+ * Basic CSS starts 
+ */
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,400i,700");
+
+body {
+  color: #252c37;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+:active {
+  outline: none;
+}
+:focus {
+  outline: none;
+  outline-width: 0;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+.btn {
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 12px 32px;
+  font-size: 18px;
+}
+
+.pad {
+  padding: 130px 0px;
+}
+
+/* 
+ * Basic CSS ends 
+ */
+
+/* header */
+/* navigation */
+
+/* secondary menu */
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  -webkit-animation: rotating 8s linear infinite;
+  -moz-animation: rotating 8s linear infinite;
+  -ms-animation: rotating 8s linear infinite;
+  -o-animation: rotating 8s linear infinite;
+  animation: rotating 8s linear infinite;
+}
+
+/* hero */
+
+.hero .hero-content {
+  text-align: center;
+}
+
+.hero-content h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 45px;
+}
+
+.hero-content hr {
+  max-width: 450px;
+  margin: 20px auto;
+  border-top: 1px solid #ddd;
+}
+
+.hero-content p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.hero-playlist {
+  margin-top: 50px;
+}
+
+.hero-playlist .figure {
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.hero-playlist .figure .disk {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  opacity: 0.5;
+}
+
+.hero-playlist .album-details {
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.hero-playlist .album-details h4 {
+  font-size: 22px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.hero-playlist .album-details h5 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #aaa;
+}
+
+.hero-playlist .album-details p {
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.playlist-content .playlist-number {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+}
+.playlist-content .music-info {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 160px);
+  padding: 10px 10px 10px 150px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+.playlist-content .music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.playlist-content .music-info h4 {
+  margin: 0;
+}
+
+.playlist-content .progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.playlist-content .progress {
+  background-color: #fe8daa;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.playlist-content .progress:hover {
+  background-color: #fe8dab;
+  transform: scale(3);
+}
+
+.playlist-content .playlist-number .song-info {
+  float: left;
+}
+
+.playlist-content .playlist-number .song-info h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.playlist-content .playlist-number .song-info p {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.playlist-content .playlist-number .music-icon {
+  float: right;
+}
+.playlist-content .playlist-number .music-icon a {
+  display: inline-block;
+  width: 30px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 20px;
+  text-align: center;
+}
+.links {
+  padding-left: 20px;
+}
+
+.hero-playlist .playlist-content {
+  max-width: 450px;
+  margin: 0 auto;
+}
